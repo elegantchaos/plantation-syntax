@@ -1,0 +1,218 @@
+@import 'syntax-variables';
+
+
+.atom-text-editor, atom-text-editor {
+  background-color: @syntax-background-color;
+  color: @syntax-text-color;
+
+  .invisible-character {
+    color: @syntax-invisible-character-color;
+  }
+
+  .indent-guide {
+    color: @syntax-indent-guide-color;
+  }
+
+  .wrap-guide {
+    background-color: @syntax-wrap-guide-color;
+  }
+
+  .gutter {
+    background-color: @syntax-gutter-background-color;
+
+    .cursor-line {
+      background-color: @syntax-gutter-background-color-selected;
+    }
+  }
+
+  .line-number.cursor-line-no-selection {
+    background-color: @syntax-gutter-background-color-selected;
+  }
+
+  .invisible {
+    color: @syntax-text-color;
+  }
+
+  .cursor {
+    border-color: @syntax-cursor-color;
+  }
+
+  .selection .region {
+    background-color: @syntax-selection-color;
+  }
+
+  .search-results .syntax--marker .region {
+    background-color: transparent;
+    border: 1px solid @syntax-result-marker-color;
+  }
+
+  .search-results .syntax--marker.current-result .region {
+    border: 1px solid @syntax-result-marker-color-selected;
+  }
+
+  .syntax--gfm {
+    .syntax--markup {
+      &.syntax--heading {
+        color: @custom-color-1;
+        font-weight: bold;
+      }
+
+      &.syntax--underline {
+        color: @custom-color-2;
+        text-decoration: underline;
+      }
+    }
+
+    .syntax--bold {
+      font-weight: bold;
+    }
+
+    .syntax--italic {
+      font-style: italic;
+    }
+
+    .syntax--raw {
+      color: @custom-color-3;
+    }
+
+    .syntax--variable.syntax--list {
+      color: @custom-color-4;
+      font-weight: bold;
+    }
+
+    .syntax--link {
+      color: #CCC;
+
+      .syntax--entity {
+        color: @custom-color-5;
+      }
+    }
+  }
+}
+
+.syntax--comment {
+  color: @plantation-comment;
+}
+
+.syntax--string {
+  color: @plantation-constant;
+}
+
+.syntax--constant {
+  &.syntax--numeric,
+  &.syntax--language,
+  &.syntax--character,
+  &.syntax--other {
+    color: @plantation-constant;
+  }
+}
+
+.syntax--keyword {
+  &.syntax--operator {
+    color: @plantation-punctuation;
+  }
+
+  &.syntax--statement {
+    color: @plantation-keyword;
+  }
+
+  &.syntax--declaration {
+    color: @plantation-definition;
+  }
+
+  &.syntax--reserved {
+    color: @plantation-keyword;
+  }
+}
+
+.syntax--storage {
+  font-style: italic;
+  color: @plantation-attribute;
+
+  &.syntax--type {
+    font-style: normal;
+    color: @plantation-definition;
+  }
+}
+
+.syntax--expressions-and-types {
+  color: @plantation-name;
+}
+
+.syntax--entity {
+  &.syntax--other {
+    &.syntax--inherited-class {
+      font-style: italic;
+      text-decoration: underline;
+      color: @custom-color-1;
+    }
+
+    &.syntax--attribute-name {
+      color: @custom-color-1;
+    }
+  }
+
+
+  &.syntax--name {
+    color: @custom-color-4;
+
+    &.syntax--class {
+      text-decoration: underline;
+      color: @custom-color-1;
+    }
+
+    &.syntax--function {
+      color: @plantation-definition;
+    }
+
+    &.syntax--instance {
+      color: @custom-color-3;
+    }
+
+    &.syntax--tag {
+      color: @custom-color-4;
+    }
+  }
+
+}
+
+.syntax--variable.syntax--parameter {
+  font-style: italic;
+  color: @custom-color-6;
+}
+
+.syntax--support {
+  &.syntax--type,
+  &.syntax--class {
+    color: @plantation-type;
+    font-style: normal;
+  }
+
+  &.syntax--function {
+    color: @plantation-name;
+  }
+
+  &.syntax--constant {
+    color: @custom-color-1;
+  }
+
+}
+
+.syntax--invalid {
+  color: @custom-color-7;
+  background-color: @custom-color-4;
+
+  &.syntax--deprecated {
+    color: @custom-color-7;
+    background-color: @custom-color-5;
+  }
+}
+
+// Jade syntax
+.syntax--class.syntax--jade {
+  color: @custom-color-5;
+}
+
+.syntax--name {
+  color: @plantation-name;
+}
